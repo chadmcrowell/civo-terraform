@@ -11,9 +11,9 @@ Contributions welcome!
 - [Civo Instance - Rocky](./civo-instance/civo-rocky-instance/)
 - [Civo Instance - Debian](./civo-instance/civo-debian-instance/)
 - [Kubeadm Cluster with Civo Instances](./civo-instance/civo-kubeadm-cluster/)
-- [Civo Managed K8s - K3s with Flannel CNI]
-- [Civo Managed K8s - K3s with Cilium]
-- [Civo Managed K8s - Talos with Flannel]
+- [Civo Managed K8s - K3s with Flannel CNI](./civo-managed-k8s/civo-k3s-flannel/)
+- [Civo Managed K8s - K3s with Cilium](./civo-managed-k8s/civo-k3s-cilium/)
+- [Civo Managed K8s - Talos with Flannel](./civo-managed-k8s/civo-talos-flannel/)
 
 ## Lookup Civo Account - Civo CLI
 > PREREQUISITE: [Civo CLI](https://www.civo.com/docs/overview/civo-cli)
