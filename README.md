@@ -16,7 +16,7 @@ Contributions welcome!
 - [Civo Managed K8s - Talos with Flannel]
 
 ## Lookup Civo Account - Civo CLI
-
+> PREREQUISITE: [Civo CLI](https://www.civo.com/docs/overview/civo-cli)
 ```bash
 # find your sshkey ('civo sshkey add..' to add a new one)
 civo sshkey ls
@@ -35,6 +35,16 @@ civo diskimage ls
 
 # find available instance sizes
 civo instance size
+
+# find available k8s node sizes
+civo kubernetes size
+
+# list available k8s versions
+civo kubernetes versions
+
+# list cluster applications to add to your cluster at startup
+civo kubernetes applications ls
+
 ```
 
 ## Example Tfvars
