@@ -1,0 +1,23 @@
+# This file is maintained automatically by "terraform init".
+# Manual edits may be lost in future updates.
+
+provider "registry.terraform.io/civo/civo" {
+  version     = "1.0.41"
+  constraints = "1.0.41"
+  hashes = [
+    "h1:iVweyJV7vAHIQtdE9R8bNEP0xgYzGomusEN+pTtGuac=",
+    "zh:000ec1cff7e7e42fcb7d2e680c098348d3e9a25d5944c14cd3b426866dabb7e2",
+    "zh:194c67b3c824c59d1c13f80ccd0b8d214148f6623b3d3fade5cd54816b2ca050",
+    "zh:23622ce5d1704570d1003765f0f62ce8c229baf24eebe3bff14ca3149222a475",
+    "zh:329080b770ce59cadd6162718bc0c661ab381f2e2e3820c05f3ad519dd4c797c",
+    "zh:3546dde7a1bb13ee0f899f7239d392e987fd561f826a8b631aaaf215e8623f1d",
+    "zh:3938154818256c99f9433e08501945741a3d33f6546af1496ae5724167035d43",
+    "zh:551b763ce98a457dd1bacb854fe0b9a17e42080422022e6a4894ca0ca204e52a",
+    "zh:5b8a073c2cd450097ce00dd892a264f35c22cd8b74eed732748922b3b103b3b0",
+    "zh:880ea17a31b68b71651540c5f0306075771393a774fe34fac412a04089d40803",
+    "zh:9c30ad927987c9b286a01326a53ad1fcc0de08952c032ce95c2647882771025a",
+    "zh:b2c4c3478b22921ec493f33f8159200111f13c57c857e475f6329ded21cb9f0c",
+    "zh:b895c7d7d5fc442b3bb709751020da0377f03f6e09c39e87518bb126c9ee076e",
+    "zh:c95af705ec4eda15fde51e4f8ca40512aa5974095f99dc0ad43de7923e317f8d",
+  ]
+}
