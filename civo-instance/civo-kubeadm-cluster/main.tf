@@ -13,7 +13,7 @@ provider "civo" {
 }
 
 resource "civo_network" "instance_net" {
-  label = "instance-net"
+  label = "k8sinstance-net"
 }
 
 resource "civo_firewall" "controlplane_firewall" {
@@ -141,14 +141,14 @@ resource "civo_firewall" "workernode_firewall" {
 data "civo_disk_image" "ubuntu" {
    filter {
         key = "name"
-        values = ["ubuntu-focal"]
+        values = ["ubuntu-focal"] # search for disk images with 'civo diskimage ls'
    }
 }
 
 resource "civo_instance" "k8s_controlplane" {
     hostname = "k8scontrolplane.xyz"
     disk_image = element(data.civo_disk_image.ubuntu.diskimages, 0).id
-    size = "g3.large"
+    size = "g3.large" # show all sizes with 'civo instance size'
     sshkey_id = "457f9017-e1a8-486a-9bdb-e99486842011"
     firewall_id = civo_firewall.controlplane_firewall.id
     network_id = civo_network.instance_net.id
@@ -200,7 +200,5 @@ resource "civo_instance" "k8s_worker" {
       sudo sysctl -w net.ipv4.ip_forward=1
       sudo sed -i '/^#net\.ipv4\.ip_forward=1/s/^#//' /etc/sysctl.conf
       sudo sysctl -p
-      sudo wget -P $HOME "https://raw.githubusercontent.com/projectcalico/calico/v3.28.0/manifests/tigera-operator.yaml"
-      sudo wget -P $HOME "https://raw.githubusercontent.com/projectcalico/calico/v3.28.0/manifests/custom-resources.yaml" 
     EOF
 }

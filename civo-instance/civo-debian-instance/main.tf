@@ -13,11 +13,11 @@ provider "civo" {
 }
 
 resource "civo_network" "jumphost_net" {
-  label = "ubujumphost-net"
+  label = "debjumphost-net"
 }
 
 resource "civo_firewall" "jump_firewall" {
-  name                 = "ubujump-firewall"
+  name                 = "jump-debfirewall"
   network_id           = civo_network.jumphost_net.id
   create_default_rules = false
   ingress_rule {
@@ -56,7 +56,7 @@ resource "civo_firewall" "jump_firewall" {
 data "civo_disk_image" "ubuntu" {
    filter {
         key = "name"
-        values = ["ubuntu-focal"] # search for disk images with 'civo diskimage ls'
+        values = ["debian-11"] # search for disk images with 'civo diskimage ls'
    }
 }
 

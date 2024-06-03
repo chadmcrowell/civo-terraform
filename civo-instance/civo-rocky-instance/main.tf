@@ -13,11 +13,11 @@ provider "civo" {
 }
 
 resource "civo_network" "jumphost_net" {
-  label = "ubujumphost-net"
+  label = "rkjumphost-net"
 }
 
 resource "civo_firewall" "jump_firewall" {
-  name                 = "ubujump-firewall"
+  name                 = "rkjump-firewall"
   network_id           = civo_network.jumphost_net.id
   create_default_rules = false
   ingress_rule {
